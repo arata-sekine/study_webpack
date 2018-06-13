@@ -1,6 +1,6 @@
-import helloContainer from './lib/hello-container';
-import './assets/index.scss'; // scssファイルをimport
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const app = document.getElementById('app');
+import App from './pages/index';
 
-app.appendChild(helloContainer());
+ReactDOM.render(<App/>, document.querySelector('#app'));

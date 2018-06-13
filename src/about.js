@@ -1,5 +1,6 @@
-import aboutContainer from './lib/about-container';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const app = document.getElementById('app');
+import App from './pages/about';
 
-app.appendChild(aboutContainer());
+ReactDOM.render(<App/>, document.querySelector('#app'));
