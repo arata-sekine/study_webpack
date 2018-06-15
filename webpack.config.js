@@ -33,7 +33,13 @@ module.exports = {
         //BabelのLoader設定
         test: /(\.js$|\.jsx$)/,
         exclude: /node_modules/,
-        use: 'babel-loader'
+          use: {
+              loader: 'babel-loader',
+              //queryを設定することで.babelrcが不要になる
+              query: {
+              presets: ["env", "react"]
+          }
+        }
       },
       {
         //CSS用のLoader設定
